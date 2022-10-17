@@ -1,0 +1,39 @@
+overmind-admin-formulario {
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%, -50%);
+  animation: slide 1s forwards;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .left {
+    height: 100%;
+    width: 100%;
+
+    background-image: url("/assets/img/left-overmind-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .right {
+    height: 100%;
+    width: 100%;
+    background-image: url("/assets/img/right-overmind-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50%;
+  }
+}

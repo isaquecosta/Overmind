@@ -1,0 +1,7 @@
+@import "overmind-colors";
+@import "../../../../overmind-shared/src/lib/overmind-buttons/overmind-buttons.scss";
+
+:root {
+  --overmind-buttom-accent: #{$overmind-accent};
+  --overmind-buttom-primary: #{$overmind-primary};
+}

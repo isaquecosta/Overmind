@@ -1,0 +1,47 @@
+@import "overmind-colors";
+@import "overmind-sizes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo-image {
+  background: url("/assets/svg/overmind-logo.svg");
+  background-size: contain;
+  &.sm {
+    width: 100px;
+    height: 100px;
+  }
+  &.md {
+    width: 150px;
+    height: 150px;
+  }
+  &.lg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: spacing(xs) 0px;
+  color: $overmind-primary;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: spacing(2xs);
+    font-weight: 200;
+  }
+  span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: spacing(2xs);
+  }
+}

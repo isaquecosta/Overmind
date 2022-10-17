@@ -1,0 +1,112 @@
+:host {
+  padding: var(--overmind-input-padding);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  position: absolute;
+  color: var(--overmind-input-color);
+  left: 20px;
+  font-size: 0.8em;
+  transition: transform 0.7s;
+  color: #cecece;
+  font-weight: bold;
+  &.error {
+    color: red;
+  }
+
+  &.valid {
+    color: #F4BB4B;
+  }
+}
+input {
+  width: 100%;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 15px;
+
+  background: #fefefe;
+  color: var(--overmind-input-color);
+  border: solid 1px rgb(0 0 0 / 25%);
+
+  &.error {
+    box-shadow: 0px 3px 5px rgb(255 0 0);
+    color: red;
+    background: #ff000005;
+  }
+  &.valid {
+    color: #F4BB4B;
+    background: #ff000005;
+  }
+
+  &.fill {
+    margin-top: 10px;
+    border-top-left-radius: 0px;
+  }
+  transition: margin 0.4s;
+  transition: border-radius 0.7s;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.label-focus {
+  transform: translateY(-25px);
+  color: var(--overmind-input-color);
+
+  &.error {
+    color: red;
+  }
+}
+
+input:active,
+input:focus {
+  box-shadow: 0px 3px 5px var(--overmind-input-color);
+  margin-top: 10px;
+  border-top-left-radius: 0px;
+}
+
+.error-container {
+  margin-top: 6px;
+  width: 100%;
+  padding-left: 5px;
+  font-size: 0.8em;
+  color: red;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  p::before {
+    content: "*";
+    color: red;
+    font-weight: bold;
+    margin-right: 3px;
+  }
+}

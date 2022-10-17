@@ -1,0 +1,38 @@
+<overmind-admin-app-logo size="md"></overmind-admin-app-logo>
+<form [formGroup]="form">
+  <overmind-simple-input [max]="40"
+  [formControlName]="formInputs.name"
+    type="text"
+    title="Nome">
+  </overmind-simple-input>
+
+  <overmind-simple-input [max]="40"
+  [formControlName]="formInputs.email"
+    type="email"
+    title="E-mail">
+  </overmind-simple-input>
+
+  <overmind-simple-input [max]="11"
+  [formControlName]="formInputs.phone"
+    type="text"
+    title="Telefone">
+  </overmind-simple-input>
+
+  <overmind-simple-input [max]="16"
+    [formControlName]="formInputs.pass"
+    type="password"
+    title="Senha">
+  </overmind-simple-input>
+
+  <overmind-simple-input [max]="16"
+    [formControlName]="formInputs.validPass"
+    valid="false"
+    type="password"
+    title="Confirmação de Senha">
+  </overmind-simple-input>
+</form>
+<button [disabled]="form.invalid"
+  (click)="doSend()"
+  overmindButton>
+  {{labelBtn()}}
+</button>

@@ -1,0 +1,18 @@
+@import "../style/overmind-buttons-mixins.scss";
+
+.overmind-simple-button {
+  @include overmind-button();
+
+  &.overmind-btn-primary {
+    background-color: var(--overmind-buttom-primary);
+    color: var(--overmind-buttom-accent);
+    border-radius: 15px;
+    font-weight: bold;
+  }
+}
+.overmind-simple-button:active {
+  opacity: 0.8;
+}
+.overmind-simple-button[disabled] {
+  opacity: 0.3;
+}

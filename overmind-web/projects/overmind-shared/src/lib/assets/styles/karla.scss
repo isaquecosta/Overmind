@@ -1,0 +1,9 @@
+:root {
+  --font-primary: "Karla", sans-serif;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("../fonts/karla/Karla-Regular.ttf") format("ttf"),
+    url("../fonts/karla/Karla-Bold.ttf") format("ttf");
+}

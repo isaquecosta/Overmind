@@ -1,0 +1,18 @@
+<div class="input-container">
+  <label class="label"
+    [class.valid]="!ngControl.errors && !ngControl.pristine && !focused"
+    [class.error]="ngControl.errors && !ngControl.pristine && !focused"
+    [class.label-focus]="focused || inputRef.value">
+    {{title}}
+  </label>
+  <input #inputRef
+    class="input"
+    [class.valid]="!ngControl.errors && !ngControl.pristine && !focused"
+    [class.error]="ngControl.errors && !ngControl.pristine && !focused"
+    [class.fill]="inputRef.value"
+    [attr.maxlength]="max"
+    [type]="type"
+    (input)="onInputChange()"
+    (blur)="focused= false"
+    (focus)="focused = true">
+</div>
